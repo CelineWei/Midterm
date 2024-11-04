@@ -163,23 +163,52 @@ h2
     clear: both;
 }
 
-@media screen and (max-width:800px)
+@media (max-width: 768px) 
 {
-    article, aside
+    /* 設定主要結構 */
+    main, article, aside, .card 
     {
-        float: none;
-        width: 100px;
-        margin: 10px;
-    }
-    .card
-    {
-        padding: 15px;
-        margin: 15px 0;
         width: 100%;
+        padding: 10px;
+        margin: 0; /* 去除外距，保持版面整齊 */
     }
-    img
+
+    /* 將橫向排列的區塊改為縱向排列 */
+    .blockcontainer, .skills 
+    {
+        flex-direction: column;
+    }
+
+    .block, .blocks 
+    {
+        width: 100%;
+        margin: 10px 0; /* 縱向間距 */
+    }
+
+    /* 縮小圖片大小避免佔據過多螢幕 */
+    .myphoto 
     {
         max-width: 100%;
         height: auto;
+        margin: 10px auto;
+    }
+
+    /* 調整導航欄的字體大小 */
+    nav a 
+    {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* 標題字體大小調整 */
+    h1, h2, h3 
+    {
+        font-size: 1.5em;
+    }
+
+    /* 縮小技能條進度條的高度 */
+    .bar 
+    {
+        height: 8px;
     }
 }
